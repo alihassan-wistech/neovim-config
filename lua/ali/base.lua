@@ -5,7 +5,7 @@ local opt = vim.opt
 
 -- Line Numbers
 opt.number = true            -- Show absolute line number on current line
-opt.relativenumber = true    -- Show relative numbers on other lines
+opt.relativenumber = false -- Show relative numbers on other lines
 opt.signcolumn = "yes"       -- Always show the side column (prevents 'jumping')
 
 -- Tabs & Indentation
