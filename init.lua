@@ -1,3 +1,5 @@
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,3 +14,7 @@ require("ali.base")
 require("ali.plugins")
 require("ali.keymaps")
 require("ali.diagnostics")
+require("ali.treesitter")
+require("ali.lsp")
+require("ali.conform")
+require("ali.commands")

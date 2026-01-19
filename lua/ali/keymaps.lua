@@ -70,3 +70,10 @@ keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = "LSP: Rename variable" })
 keymap.set('n', '<A-CR>', vim.lsp.buf.code_action, { desc = "LSP: Code Actions" })
 
 keymap.set('n', '<C-Tab>', require('telescope.builtin').buffers)
+-- Normal Mode: Comment current line
+keymap.set('n', '<C-/>', 'gcc', { remap = true })
+keymap.set('n', '<C-_>', 'gcc', { remap = true })
+
+-- Visual Mode: Comment selection
+keymap.set('v', '<C-/>', 'gc', { remap = true })
+keymap.set('v', '<C-_>', 'gc', { remap = true })
