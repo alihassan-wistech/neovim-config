@@ -107,7 +107,8 @@ require("lazy").setup({
     branch = 'master', -- Use master to get the absolute latest compatibility fixes
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
-      require('telescope').setup({
+        local actions = require("telescope.actions")
+        require('telescope').setup({
         defaults = {
           -- This is the fallback fix: 
           -- If the previewer still crashes, it forces it to use the stable highlighter
@@ -117,7 +118,11 @@ require("lazy").setup({
           mappings = {
             i = {
               ["<C-j>"] = "move_selection_next",
-              ["<C-k>"] = "move_selection_previous"
+              ["<C-k>"] = "move_selection_previous",
+              ["<C-d>"] = actions.delete_buffer
+            },
+            n = {
+                ["<C-d>"] = actions.delete_buffer
             }
           }
         }
@@ -131,7 +136,17 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("nvim-tree").setup({
-        view = { width = 40, side = "left" }
+        view = { width = 40, side = "left" },
+        actions = {
+            change_dir = {
+                enable = false,
+                global = false
+            }
+        },
+        renderer = {
+            highlight_opened_files = "all",
+            root_folder_label = false,
+        }
       })
     end
   },

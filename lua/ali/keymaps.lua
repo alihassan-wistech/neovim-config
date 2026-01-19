@@ -52,7 +52,7 @@ keymap.set("n", "<C-r>p", ":%s/\\<<C-r><C-w>\\>/", { desc = "Replace word under 
 -- 7. MODE TOGGLES (Ctrl + Space)
 -- Enter/Exit Insert mode
 keymap.set({'n', 'v'}, '<C-Space>', 'i', { desc = "Enter Insert Mode" })
-keymap.set({'n', 'v'}, '<C-@>', 'i') 
+keymap.set({'n', 'v'}, '<C-@>', 'i')
 keymap.set('i', '<C-Space>', '<Esc>', { desc = "Exit Insert Mode" })
 keymap.set('i', '<C-@>', '<Esc>')
 
@@ -68,3 +68,5 @@ keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = "LSP: Rename variable" })
 
 -- Alt + Enter: Code Actions (Fix errors/Import classes)
 keymap.set('n', '<A-CR>', vim.lsp.buf.code_action, { desc = "LSP: Code Actions" })
+
+keymap.set('n', '<C-Tab>', require('telescope.builtin').buffers)
