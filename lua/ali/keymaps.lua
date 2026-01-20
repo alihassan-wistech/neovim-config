@@ -11,10 +11,11 @@ keymap.set('n', '<C-p>', builtin.find_files, { desc = "Fuzzy find files" })
 keymap.set('n', '<C-f>', builtin.live_grep, { desc = "Search text in project" })
 
 -- Ctrl + b: Search open buffers (Current open files)
-keymap.set('n', '<C-b>', builtin.buffers, { desc = "Search buffers" })
+-- keymap.set('n', '<C-b>', builtin.buffers, { desc = "Search buffers" })
 
 -- Ctrl + h: Search help tags
-keymap.set('n', '<C-S-h>', builtin.help_tags, { desc = "Search help" })
+-- keymap.set('n', '<C-S-h>', builtin.help_tags, { desc = "Search help" })
+keymap.set('n', '<C-o>', builtin.lsp_document_symbols, { remap = true,  desc = "Search help" })
 -- 1. SAVE OPERATIONS (Ctrl + s)
 
 -- Save in Normal and Visual Mode
