@@ -25,3 +25,9 @@ opt.cursorline = true        -- Highlight the line the cursor is on
 opt.scrolloff = 8            -- Keep 8 lines above/below cursor when scrolling
 opt.mouse = "a"              -- Allow mouse support (useful for resizing)
 opt.clipboard = "unnamedplus" -- Use system clipboard (requires xclip/wl-clipboard)
+
+
+if vim.g.neovide then
+    vim.g.neovide_scale_factor = 1.0
+    vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h12"
+end
