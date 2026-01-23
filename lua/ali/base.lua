@@ -29,5 +29,5 @@ opt.clipboard = "unnamedplus" -- Use system clipboard (requires xclip/wl-clipboa
 
 if vim.g.neovide then
     vim.g.neovide_scale_factor = 1.0
-    vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h12"
+    vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h:16"
 end

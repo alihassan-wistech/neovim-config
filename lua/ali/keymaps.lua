@@ -34,11 +34,11 @@ keymap.set("n", "<C-e>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle Explorer" }
 
 -- 4. WINDOW MANAGEMENT (Ctrl + v, h, x)
 -- Vertical split
-keymap.set("n", "<C-v>", "<cmd>vsplit<CR>", { desc = "Split Vertical" })
+-- keymap.set("n", "<C-v>", "<cmd>vsplit<CR>", { desc = "Split Vertical" })
 -- Horizontal split
-keymap.set("n", "<C-h>", "<cmd>split<CR>", { desc = "Split Horizontal" })
+-- keymap.set("n", "<C-h>", "<cmd>split<CR>", { desc = "Split Horizontal" })
 -- Close split
-keymap.set("n", "<C-x>", "<cmd>close<CR>", { desc = "Close Split" })
+-- keymap.set("n", "<C-x>", "<cmd>close<CR>", { desc = "Close Split" })
 
 -- 5. NAVIGATION BETWEEN SPLITS (Standard Ctrl + hjkl)
 keymap.set('n', '<C-h>', '<C-w>h')
@@ -54,8 +54,8 @@ keymap.set("n", "<C-r>p", ":%s/\\<<C-r><C-w>\\>/", { desc = "Replace word under 
 -- Enter/Exit Insert mode
 keymap.set({'n', 'v'}, '<C-Space>', 'i', { desc = "Enter Insert Mode" })
 keymap.set({'n', 'v'}, '<C-@>', 'i')
-keymap.set('i', '<C-Space>', '<Esc>', { desc = "Exit Insert Mode" })
-keymap.set('i', '<C-@>', '<Esc>')
+keymap.set({'i', 'v'}, '<C-Space>', '<Esc>', { desc = "Exit Insert Mode" })
+keymap.set({'i', 'v'}, '<C-@>', '<Esc>')
 
 -- Go to definition on F12
 -- Normal mode: jumps to the code
