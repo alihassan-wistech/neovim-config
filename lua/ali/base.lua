@@ -31,3 +31,12 @@ if vim.g.neovide then
     vim.g.neovide_scale_factor = 1.0
     vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h:16"
 end
+
+local function set_transparent()
+    local groups = { "Normal", "NormalNC", "SignColumn", "StatusLine", "StatusLineNC", "EndOfBuffer" }
+    for _, group in ipairs(groups) do
+        vim.api.nvim_set_hl(0, group, { bg = "none" })
+    end
+end
+
+set_transparent()
