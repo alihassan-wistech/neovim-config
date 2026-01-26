@@ -24,6 +24,20 @@ require("lazy").setup({
                     "NvimTreeEndOfBuffer",
                     "NvimTreeWinSeparator",
                     "TelescopePreviewBorder",
+                    "Pmenu", -- The suggestion list background
+                    -- "PmenuSel", -- The selected item (you might want to keep a color here!)
+                    -- "PmenuSbar", -- The scrollbar
+                    -- "PmenuThumb", -- The scrollbar handle
+                    "CmpDoc",       -- The documentation window background
+                    "CmpDocBorder", -- The border of the doc window
+                    "NormalFloat",  -- General floating windows
+                    "FloatBorder",  -- General borders
+                    "lualine_c_normal",
+                    "lualine_c_insert",
+                    "lualine_c_visual",
+                    "lualine_c_replace",
+                    "lualine_c_command",
+                    "lualine_c_inactive",
                 },
                 -- table: groups you don't want to clear
                 exclude_groups = {},
