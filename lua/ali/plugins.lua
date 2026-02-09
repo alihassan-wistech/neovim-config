@@ -1,6 +1,15 @@
 ---@diagnostic disable-next-line: undefined-global
+
 local vim = vim
 require("lazy").setup({
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+        }
+    },
     {
         "xiyaowong/transparent.nvim",
         config = function()
